@@ -46,11 +46,7 @@ class RestAPIClient {
         request(Pod.self, APIRouter.pictureOfDay.request, completion: completion)
     }
     
-}
-
-// MARK: - Download request
-extension RestAPIClient {
-
+    // MARK: - Download request
     func downloadRequest<T: Decodable>(_ type: T.Type, _ request: URLRequest?, completion: @escaping(Result<T, NetworkError>) -> Void) {
         guard let request = request else {
             return completion(.failure(.BadURL))
@@ -68,4 +64,5 @@ extension RestAPIClient {
         let request = APIRouter.imageUrl(url).request
         self.downloadRequest(Data.self, request, completion: completion)
     }
+    
 }

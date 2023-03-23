@@ -15,6 +15,10 @@ class PODViewModel: NSObject {
     
     var pod: Observable<Pod> = Observable(nil)
     var imageData: Observable<Data> = Observable(nil)
+    var isOldPicture: Observable<Bool> = Observable(false)
+    
+    var isSameDate: Bool = false
+    var currentDate: Date = Date()
     
     // Injecting dependencies - service, network manager & persstence manager
     init(podService: PODServiceDelegate = PODService(),
@@ -25,20 +29,45 @@ class PODViewModel: NSObject {
         self.networkManager = networkManager
     }
     
+    // MARK: - Get picture of day
+    /*
+     1. Check for pod model and image data into the local persistence storage
+     2. If not found call api
+     3. Check if date stored in local store is same as today's date or internet is not connected then show saved picture from store
+     4. If date is not same and internet is connected, then call api
+     5. Set observables' value
+     */
     func getPictureOfDay() {
-        // Check for pod model and image data into the local persistence storage
+        // #1
         guard let pod = persistenceManager.getValue(Pod.self, for: EntityKey.pod.rawValue),
               let imageData = persistenceManager.getValue(Data.self, for: EntityKey.imageData.rawValue) else {
-           // If not found, get it from API call
+           // #2
            callServiceToGetThePictureOfDay()
            return
         }
-        // If found, return objects from the local persistence storage
+        
+        // Compare current date with pod date
+        isDateSameAs(podDate: pod.date, currentDate: currentDate)
+        
+        // #3
+        guard isSameDate ||
+            !networkManager.isConnected() else {
+            // #4
+            callServiceToGetThePictureOfDay()
+            return
+        }
+        
+        // #5
         self.pod.value = pod
         self.imageData.value = imageData
+        isOldPicture.value = !isSameDate
     }
     
-    // Get picture of day object from server
+    func isDateSameAs(podDate: String, currentDate: Date) {
+        isSameDate = podDate.isSameAs(date: currentDate)
+    }
+    
+    // MARK: Get picture of day object from service
     func callServiceToGetThePictureOfDay() {
         guard networkManager.isConnected() else {
             // TODO: - Show network error to user and add some retry method without relaunching
@@ -56,7 +85,7 @@ class PODViewModel: NSObject {
         }
     }
     
-    // Get image data from server
+    // MARK: Get image data from service
     func getImageData() {
         guard networkManager.isConnected() else {
             return
