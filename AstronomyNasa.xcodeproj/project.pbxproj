@@ -23,6 +23,7 @@
 		94405A6929CC54CF00B96298 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A6829CC54CF00B96298 /* APIRouter.swift */; };
 		94405A6C29CC5E9C00B96298 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A6B29CC5E9C00B96298 /* Observable.swift */; };
 		94405A6F29CC6DB500B96298 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A6E29CC6DB500B96298 /* NetworkManager.swift */; };
+		94405A7229CC745200B96298 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A7129CC745200B96298 /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		94405A6829CC54CF00B96298 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		94405A6B29CC5E9C00B96298 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		94405A6E29CC6DB500B96298 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		94405A7129CC745200B96298 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		94405A2629CC512600B96298 /* AstronomyNasa */ = {
 			isa = PBXGroup;
 			children = (
+				94405A7029CC744100B96298 /* Persistence */,
 				94405A6A29CC5E8F00B96298 /* Utils */,
 				94405A5829CC526B00B96298 /* Screen */,
 				94405A6129CC531700B96298 /* Service */,
@@ -218,6 +221,14 @@
 				94405A6E29CC6DB500B96298 /* NetworkManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		94405A7029CC744100B96298 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				94405A7129CC745200B96298 /* PersistenceManager.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +371,7 @@
 				94405A2A29CC512600B96298 /* SceneDelegate.swift in Sources */,
 				94405A6929CC54CF00B96298 /* APIRouter.swift in Sources */,
 				94405A5F29CC52A900B96298 /* PODModel.swift in Sources */,
+				94405A7229CC745200B96298 /* PersistenceManager.swift in Sources */,
 				94405A6329CC532300B96298 /* PODService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

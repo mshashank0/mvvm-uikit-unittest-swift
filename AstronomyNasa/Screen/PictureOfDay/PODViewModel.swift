@@ -11,50 +11,65 @@ class PODViewModel: NSObject {
     
     private let podService: PODServiceDelegate
     private let networkManager: NetworkManagerDelegate
+    private let persistenceManager: any PersistenceManagerDelegate
     
     var pod: Observable<Pod> = Observable(nil)
     var imageData: Observable<Data> = Observable(nil)
     
-    // Injecting service dependency
+    // Injecting dependencies - service, network manager & persstence manager
     init(podService: PODServiceDelegate = PODService(),
+         persistenceManager: any PersistenceManagerDelegate = UserDefaultPersistenceManager(),
          networkManager: NetworkManagerDelegate = NetworkManager.shared) {
         self.podService = podService
+        self.persistenceManager = persistenceManager
         self.networkManager = networkManager
     }
     
     func getPictureOfDay() {
-        // Check internet connectivity
+        // Check for pod model and image data into the local persistence storage
+        guard let pod = persistenceManager.getValue(Pod.self, for: EntityKey.pod.rawValue),
+              let imageData = persistenceManager.getValue(Data.self, for: EntityKey.imageData.rawValue) else {
+           // If not found, get it from API call
+           callServiceToGetThePictureOfDay()
+           return
+        }
+        // If found, return objects from the local persistence storage
+        self.pod.value = pod
+        self.imageData.value = imageData
+    }
+    
+    // Get picture of day object from server
+    func callServiceToGetThePictureOfDay() {
         guard networkManager.isConnected() else {
-            // TODO: - Handle error
+            // TODO: - Show network error to user and add some retry method without relaunching
             return
         }
-        // Get pod model
         podService.getPod { [weak self] result in
             switch result {
             case .success(let value):
                 self?.pod.value = value
+                // Save Pod object in the local persistence storage
+                self?.persistenceManager.saveValue(Pod.self, with: value, for: EntityKey.pod.rawValue)
             case .failure(_): break
-                //TO DO :- Handle error
+                // TODO: - Handle error
             }
         }
     }
     
-    // Get image data from pod service
+    // Get image data from server
     func getImageData() {
-        // Check internet connectivity
         guard networkManager.isConnected() else {
-            // TODO: - Handle error
             return
         }
-        // Check if url is available
         guard let imageUrl = pod.value?.url else {
             return
         }
-        // Get image data
         podService.getImageData(from: imageUrl) { [weak self] result in
             switch result {
             case .success(let value):
                 self?.imageData.value = value
+                // Save image data in the local persistence storage
+                self?.persistenceManager.saveValue(Data.self, with: value, for: EntityKey.imageData.rawValue)
             case .failure(_):
                 // TODO: - Handle error
                 break
