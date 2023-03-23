@@ -16,6 +16,7 @@ protocol PersistenceManagerDelegate {
     associatedtype ObjectType
     func saveValue<ObjectType: Encodable>(_ type: ObjectType.Type, with value: ObjectType, for entityKey: String)
     func getValue<ObjectType: Decodable>(_ type: ObjectType.Type, for entityKey: String) -> ObjectType?
+    func removeValue(entityKey: String)
 }
 
 class UserDefaultPersistenceManager: PersistenceManagerDelegate {
@@ -47,5 +48,9 @@ class UserDefaultPersistenceManager: PersistenceManagerDelegate {
         } catch {
             return nil
         }
+    }
+    
+    func removeValue(entityKey: String) {
+        store.removeObject(forKey: entityKey)
     }
 }

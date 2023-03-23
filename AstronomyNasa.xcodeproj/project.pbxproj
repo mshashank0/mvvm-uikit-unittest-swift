@@ -12,7 +12,6 @@
 		94405A2F29CC512600B96298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94405A2D29CC512600B96298 /* Main.storyboard */; };
 		94405A3129CC512700B96298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94405A3029CC512700B96298 /* Assets.xcassets */; };
 		94405A3429CC512700B96298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94405A3229CC512700B96298 /* LaunchScreen.storyboard */; };
-		94405A3F29CC512700B96298 /* PODServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A3E29CC512700B96298 /* PODServiceTests.swift */; };
 		94405A4929CC512700B96298 /* AstronomyNasaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A4829CC512700B96298 /* AstronomyNasaUITests.swift */; };
 		94405A4B29CC512700B96298 /* AstronomyNasaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A4A29CC512700B96298 /* AstronomyNasaUITestsLaunchTests.swift */; };
 		94405A5B29CC529400B96298 /* PODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A5A29CC529400B96298 /* PODViewController.swift */; };
@@ -31,6 +30,11 @@
 		94405A8029CC804500B96298 /* MockPodResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 94405A7E29CC803F00B96298 /* MockPodResponse.json */; };
 		94405A8229CC84B700B96298 /* NGC2841_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94405A8129CC84B700B96298 /* NGC2841_1024.jpg */; };
 		94405A8329CC84BB00B96298 /* NGC2841_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94405A8129CC84B700B96298 /* NGC2841_1024.jpg */; };
+		94405A8529CC893300B96298 /* MockPODService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A8429CC893300B96298 /* MockPODService.swift */; };
+		94405A8729CC894A00B96298 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A8629CC894A00B96298 /* MockNetworkManager.swift */; };
+		94405A8929CC895500B96298 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A8829CC895500B96298 /* MockAPIClient.swift */; };
+		94405A8B29CC897200B96298 /* PODViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A8A29CC897200B96298 /* PODViewModelTests.swift */; };
+		94405A8D29CC91A400B96298 /* PODServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A8C29CC91A400B96298 /* PODServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +63,6 @@
 		94405A3329CC512700B96298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94405A3529CC512700B96298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94405A3A29CC512700B96298 /* AstronomyNasaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstronomyNasaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94405A3E29CC512700B96298 /* PODServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODServiceTests.swift; sourceTree = "<group>"; };
 		94405A4429CC512700B96298 /* AstronomyNasaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstronomyNasaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94405A4829CC512700B96298 /* AstronomyNasaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyNasaUITests.swift; sourceTree = "<group>"; };
 		94405A4A29CC512700B96298 /* AstronomyNasaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyNasaUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -77,6 +80,11 @@
 		94405A7929CC7FEE00B96298 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		94405A7E29CC803F00B96298 /* MockPodResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockPodResponse.json; sourceTree = "<group>"; };
 		94405A8129CC84B700B96298 /* NGC2841_1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NGC2841_1024.jpg; sourceTree = "<group>"; };
+		94405A8429CC893300B96298 /* MockPODService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPODService.swift; sourceTree = "<group>"; };
+		94405A8629CC894A00B96298 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		94405A8829CC895500B96298 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
+		94405A8A29CC897200B96298 /* PODViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODViewModelTests.swift; sourceTree = "<group>"; };
+		94405A8C29CC91A400B96298 /* PODServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,9 +150,10 @@
 		94405A3D29CC512700B96298 /* AstronomyNasaTests */ = {
 			isa = PBXGroup;
 			children = (
-				94405A3E29CC512700B96298 /* PODServiceTests.swift */,
+				94405A8C29CC91A400B96298 /* PODServiceTests.swift */,
+				94405A8A29CC897200B96298 /* PODViewModelTests.swift */,
+				94405A7529CC7F9F00B96298 /* Mocks */,
 				94405A7829CC7FE400B96298 /* Helper */,
-				94405A7529CC7F9F00B96298 /* Mock */,
 			);
 			path = AstronomyNasaTests;
 			sourceTree = "<group>";
@@ -246,13 +255,16 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
-		94405A7529CC7F9F00B96298 /* Mock */ = {
+		94405A7529CC7F9F00B96298 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				94405A7B29CC801300B96298 /* MockData */,
 				94405A7629CC7FC400B96298 /* MockURLProtocol.swift */,
+				94405A8429CC893300B96298 /* MockPODService.swift */,
+				94405A8629CC894A00B96298 /* MockNetworkManager.swift */,
+				94405A8829CC895500B96298 /* MockAPIClient.swift */,
+				94405A7B29CC801300B96298 /* MockData */,
 			);
-			path = Mock;
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		94405A7829CC7FE400B96298 /* Helper */ = {
@@ -426,9 +438,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94405A3F29CC512700B96298 /* PODServiceTests.swift in Sources */,
+				94405A8529CC893300B96298 /* MockPODService.swift in Sources */,
+				94405A8B29CC897200B96298 /* PODViewModelTests.swift in Sources */,
 				94405A7729CC7FC400B96298 /* MockURLProtocol.swift in Sources */,
 				94405A7A29CC7FEE00B96298 /* Helper.swift in Sources */,
+				94405A8729CC894A00B96298 /* MockNetworkManager.swift in Sources */,
+				94405A8929CC895500B96298 /* MockAPIClient.swift in Sources */,
+				94405A8D29CC91A400B96298 /* PODServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +543,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACH_O_TYPE = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -581,6 +598,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACH_O_TYPE = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -609,6 +627,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ssk.practice.AstronomyNasa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -637,6 +656,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ssk.practice.AstronomyNasa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -656,6 +676,7 @@
 				DEVELOPMENT_TEAM = HEJDYB7G5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACH_O_TYPE = mh_bundle;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ssk.practice.AstronomyNasaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -676,6 +697,7 @@
 				DEVELOPMENT_TEAM = HEJDYB7G5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACH_O_TYPE = mh_bundle;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ssk.practice.AstronomyNasaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -694,6 +716,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HEJDYB7G5K;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACH_O_TYPE = mh_bundle;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ssk.practice.AstronomyNasaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -712,6 +735,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HEJDYB7G5K;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACH_O_TYPE = mh_bundle;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ssk.practice.AstronomyNasaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
