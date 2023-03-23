@@ -12,6 +12,7 @@ class PODViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UITextView!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var errorLabel: UILabel!
 
     var viewModel: PODViewModel?
 
@@ -38,6 +39,7 @@ class PODViewController: UIViewController {
     
     func showTextualData() {
         DispatchQueue.main.async { [unowned self] in
+            errorLabel.isHidden = !(viewModel?.isOldPicture.value ?? false)
             titleLabel.text = viewModel?.pod.value?.title ?? ""
             descriptionLabel.text = viewModel?.pod.value?.explanation ?? ""
         }
