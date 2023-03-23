@@ -19,6 +19,8 @@
 		94405A5D29CC529E00B96298 /* PODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A5C29CC529E00B96298 /* PODViewModel.swift */; };
 		94405A5F29CC52A900B96298 /* PODModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A5E29CC52A900B96298 /* PODModel.swift */; };
 		94405A6329CC532300B96298 /* PODService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A6229CC532300B96298 /* PODService.swift */; };
+		94405A6729CC54AE00B96298 /* RestAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A6629CC54AE00B96298 /* RestAPIClient.swift */; };
+		94405A6929CC54CF00B96298 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A6829CC54CF00B96298 /* APIRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		94405A5C29CC529E00B96298 /* PODViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODViewModel.swift; sourceTree = "<group>"; };
 		94405A5E29CC52A900B96298 /* PODModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODModel.swift; sourceTree = "<group>"; };
 		94405A6229CC532300B96298 /* PODService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PODService.swift; sourceTree = "<group>"; };
+		94405A6629CC54AE00B96298 /* RestAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIClient.swift; sourceTree = "<group>"; };
+		94405A6829CC54CF00B96298 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +109,10 @@
 		94405A2629CC512600B96298 /* AstronomyNasa */ = {
 			isa = PBXGroup;
 			children = (
-				94405A6129CC531700B96298 /* Service */,
-				94405A6029CC52FC00B96298 /* InterfaceBuilder */,
 				94405A5829CC526B00B96298 /* Screen */,
+				94405A6129CC531700B96298 /* Service */,
+				94405A6529CC549F00B96298 /* Network */,
+				94405A6029CC52FC00B96298 /* InterfaceBuilder */,
 				94405A5729CC526100B96298 /* BaseClass */,
 				94405A6429CC533F00B96298 /* Asset */,
 			);
@@ -182,6 +187,15 @@
 				94405A3529CC512700B96298 /* Info.plist */,
 			);
 			path = Asset;
+			sourceTree = "<group>";
+		};
+		94405A6529CC549F00B96298 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				94405A6629CC54AE00B96298 /* RestAPIClient.swift */,
+				94405A6829CC54CF00B96298 /* APIRouter.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,10 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94405A6729CC54AE00B96298 /* RestAPIClient.swift in Sources */,
 				94405A5B29CC529400B96298 /* PODViewController.swift in Sources */,
 				94405A5D29CC529E00B96298 /* PODViewModel.swift in Sources */,
 				94405A2829CC512600B96298 /* AppDelegate.swift in Sources */,
 				94405A2A29CC512600B96298 /* SceneDelegate.swift in Sources */,
+				94405A6929CC54CF00B96298 /* APIRouter.swift in Sources */,
 				94405A5F29CC52A900B96298 /* PODModel.swift in Sources */,
 				94405A6329CC532300B96298 /* PODService.swift in Sources */,
 			);
