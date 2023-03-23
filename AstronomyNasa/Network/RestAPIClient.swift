@@ -47,3 +47,25 @@ class RestAPIClient {
     }
     
 }
+
+// MARK: - Download request
+extension RestAPIClient {
+
+    func downloadRequest<T: Decodable>(_ type: T.Type, _ request: URLRequest?, completion: @escaping(Result<T, NetworkError>) -> Void) {
+        guard let request = request else {
+            return completion(.failure(.BadURL))
+        }
+        urlSession.dataTask(with: request) { data, response, error in
+            guard let data = data as? T, error == nil else {
+                return completion(.failure(.NoData))
+            }
+            completion(.success(data))
+        }.resume()
+    }
+    
+    // Download and get image data
+    func getImageData(from url: String, completion: @escaping(Result<Data, NetworkError>) -> Void) {
+        let request = APIRouter.imageUrl(url).request
+        self.downloadRequest(Data.self, request, completion: completion)
+    }
+}

@@ -21,17 +21,20 @@ enum Method: String {
 enum APIRouter {
     
     case pictureOfDay
+    case imageUrl(String)
     
     private var urlPath :String {
         switch self {
         case .pictureOfDay:
             return "\(baseUrl)/planetary/apod?api_key=\(pocKey)"
+        case .imageUrl(let url):
+            return url
         }
     }
     
     private var method: Method {
         switch self {
-        case .pictureOfDay:
+        case .pictureOfDay, .imageUrl(_):
             return .get
         }
     }
