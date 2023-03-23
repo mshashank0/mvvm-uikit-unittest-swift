@@ -18,11 +18,7 @@ class RestAPIClient {
     
     var urlSession: URLSession
     
-    init(urlSession: URLSession?) {
-        guard let urlSession = urlSession else {
-            self.urlSession = .shared
-            return
-        }
+    init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession
     }
     
