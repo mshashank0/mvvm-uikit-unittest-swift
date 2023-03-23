@@ -29,6 +29,8 @@
 		94405A7A29CC7FEE00B96298 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94405A7929CC7FEE00B96298 /* Helper.swift */; };
 		94405A7F29CC804200B96298 /* MockPodResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 94405A7E29CC803F00B96298 /* MockPodResponse.json */; };
 		94405A8029CC804500B96298 /* MockPodResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 94405A7E29CC803F00B96298 /* MockPodResponse.json */; };
+		94405A8229CC84B700B96298 /* NGC2841_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94405A8129CC84B700B96298 /* NGC2841_1024.jpg */; };
+		94405A8329CC84BB00B96298 /* NGC2841_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94405A8129CC84B700B96298 /* NGC2841_1024.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,7 @@
 		94405A7629CC7FC400B96298 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		94405A7929CC7FEE00B96298 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		94405A7E29CC803F00B96298 /* MockPodResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockPodResponse.json; sourceTree = "<group>"; };
+		94405A8129CC84B700B96298 /* NGC2841_1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NGC2841_1024.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +266,7 @@
 		94405A7B29CC801300B96298 /* MockData */ = {
 			isa = PBXGroup;
 			children = (
+				94405A8129CC84B700B96298 /* NGC2841_1024.jpg */,
 				94405A7E29CC803F00B96298 /* MockPodResponse.json */,
 			);
 			path = MockData;
@@ -374,6 +378,7 @@
 			files = (
 				94405A3429CC512700B96298 /* LaunchScreen.storyboard in Resources */,
 				94405A3129CC512700B96298 /* Assets.xcassets in Resources */,
+				94405A8329CC84BB00B96298 /* NGC2841_1024.jpg in Resources */,
 				94405A8029CC804500B96298 /* MockPodResponse.json in Resources */,
 				94405A2F29CC512600B96298 /* Main.storyboard in Resources */,
 			);
@@ -383,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94405A8229CC84B700B96298 /* NGC2841_1024.jpg in Resources */,
 				94405A7F29CC804200B96298 /* MockPodResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
