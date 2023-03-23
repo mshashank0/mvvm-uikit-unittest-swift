@@ -24,17 +24,29 @@ class PODViewController: UIViewController {
         
         // Observer for getting pod object update
         viewModel?.pod.bind({ [weak self] _ in
-            self?.presentDataOnView()
+            self?.viewModel?.getImageData()
+            self?.showTextualData()
+        })
+        
+        // Obsevers for binded image data object
+        viewModel?.imageData.bind({ [weak self] _ in
+            self?.showPicture()
         })
         
         viewModel?.getPictureOfDay()
     }
     
-    func presentDataOnView() {
+    func showTextualData() {
         DispatchQueue.main.async { [unowned self] in
-            // TODO: - Get image and set it on imageView
             titleLabel.text = viewModel?.pod.value?.title ?? ""
             descriptionLabel.text = viewModel?.pod.value?.explanation ?? ""
+        }
+    }
+    
+    func showPicture() {
+        guard let imageData = viewModel?.imageData.value else { return }
+        DispatchQueue.main.async { [unowned self] in
+            imageView.image = UIImage(data: imageData)
         }
     }
 }
